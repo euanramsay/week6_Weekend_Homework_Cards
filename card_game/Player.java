@@ -4,7 +4,8 @@ import java.util.*;
 public class Player {
 
   private String name;
-  private ArrayList<Card> hand;
+  private Card card;
+  public ArrayList<Card> hand;
 
   public Player(String name){
     this.name = name;
@@ -14,6 +15,10 @@ public class Player {
   public String getName(){
     return this.name;
   }
+
+  public void takeCard(Card card){
+      this.hand.add(card);
+    }
 
   public int cardInHandCount(){
     return this.hand.size();
